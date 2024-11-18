@@ -13,12 +13,12 @@
         <%= f.password_field :password, autocomplete: "current-password" , class: "loginSectionPassword" %>
       </div>
 
-      <% if devise_mapping.rememberable? %>
+      <!-- <% if devise_mapping.rememberable? %>
         <div class="loginSectionCheck">
           <%= f.check_box :remember_me, class: "loginSectionCheckbox" %>
           <%= f.label :remember_me, class: "loginSectionRemember" %>
         </div>
-      <% end %>
+      <% end %> -->
 
       <div class="loginSectionFieldActions">
         <%= f.submit "Log in", class: "loginSectionSubmit" %>
