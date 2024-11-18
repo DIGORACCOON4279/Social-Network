@@ -1,0 +1,21 @@
+<section class="homeDashboard">
+  <div class="homeDashboardContainer">
+    <h1 class="homeDashboardTitle">Dasboard</h1>
+
+    <div class="homeDashboardWelcome">
+      <p class="homeDashboardParagraph">Bienvenido, <%= current_user.name %>!</p>
+      <p class="homeDashboardParagraph"><%= current_user.email %>!</p>
+    </div>
+
+    <% if user_signed_in? %>
+
+      <%= form_for :destroy_user_session, url: destroy_user_session_path, method: :delete, html: { class: 'homeDashboardSignOutForm' } do %>
+        <%= submit_tag 'Sign out', class: 'homeDashboardBtnSignOut' %>
+      <% end %>
+
+    <% else %>
+      <%= link_to 'Iniciar sesión', new_user_session_path, class: 'btnLogin' %>
+      <%= link_to 'Registrarse', new_user_registration_path, class: 'btnSignup' %>
+    <% end %>
+  </div>
+</section>

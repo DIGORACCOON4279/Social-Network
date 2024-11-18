@@ -1,0 +1,30 @@
+<section class="loginSection">
+  <div class="loginSectionContainer">
+    <h2 class="loginSectionTitle">Log in</h2>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "loginSectionForm"} ) do |f| %>
+      <div class="loginSectionField">
+        <%= f.label :email, class: "loginSectionlabel" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "loginSectionEmail" %>
+      </div>
+
+      <div class="loginSectionField">
+        <%= f.label :password, class: "loginSectionlabel" %>
+        <%= f.password_field :password, autocomplete: "current-password" , class: "loginSectionPassword" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="loginSectionCheck">
+          <%= f.check_box :remember_me, class: "loginSectionCheckbox" %>
+          <%= f.label :remember_me, class: "loginSectionRemember" %>
+        </div>
+      <% end %>
+
+      <div class="loginSectionFieldActions">
+        <%= f.submit "Log in", class: "loginSectionSubmit" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links"%>
+  </div>
+</section>
