@@ -1,96 +1,135 @@
 
 .loginSection{
-  width:100vw;
+  width:100%;
   height:100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #f8f8f8;
-  .loginSectionContainer{
-    width:400px;
-    min-width:250px;
+  overflow: hidden;
+  .loginSectionHome{
+    width:100%;
     height:auto;
+    display:flex;
+    .homeLink{
+      width:auto;
+      height: auto;
+      background-color: #000000;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      color: white;
+      margin:10px;
+      padding:10px 15px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      font-family: "Raleway", sans-serif;
+      text-decoration: none;
+      transition:0.3s ease-in-out;
+      &:hover{
+        color: #000000;
+        background-color: #ffffff;
+      }
+    }
+  }
+  .loginSectionContainer{
+    width:100%;
+    height:100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    background-color: #ffffff;
-    box-shadow: 4px 4px 16px 4px #cfcfcf;
-    padding:25px;
-    .loginSectionTitle{
-      color:#424242;
-      font-weight: 400;
-      font-size: 2rem;
-      font-family: "Raleway", sans-serif;
-      font-weight: 700;
-      margin-bottom: 30px;
-    }
-    .loginSectionForm{
-      width:100%;
+    .loginForm{
+      width:400px;
+      min-width:250px;
+      height:auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap:10px;
-      .loginSectionField,
-      .loginSectionCheck{
+      border-radius: 20px;
+      background-color: #ffffff;
+      box-shadow: 4px 4px 16px 4px #cfcfcf;
+      padding:25px;
+      .loginSectionTitle{
+        color:#424242;
+        font-weight: 400;
+        font-size: 2rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+      .loginSectionForm{
         width:100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap:5px;
-        .loginSectionlabel{
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        .loginSectionField{
           width:100%;
-          color:#a0a0a0;
-          font-weight: 400;
-          font-size: 0.8rem;
-          font-family: "Raleway", sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap:5px;
+          .loginSectionlabel{
+            width:100%;
+            color:#424242;
+            font-weight: 600;
+            font-size: 0.8rem;
+            font-family: "Raleway", sans-serif;
+          }
+          .loginSectionEmail,
+          .loginSectionPassword{
+            width:100%;
+            padding: 10px;
+            color:#6e6e6e;
+            font-weight: 400;
+            font-size: 1rem;
+            font-family: "Raleway", sans-serif;
+            border-radius: 5px;
+            border:1px solid #cecece;
+            transition:0.3s ease-in-out;
+            &:focus{
+              border: 1px solid #8a2be2;
+              outline: none;
+            }
+          }
         }
-        .loginSectionEmail,
-        .loginSectionPassword{
+        // .loginSectionCheck{
+        //   display: flex;
+        //   flex-direction: row;
+        //   .loginSectionCheckbox{
+        //     height:auto;
+        //     border-radius: 5px;
+        //     border:1px solid #cecece;
+        //   }
+        //   .loginSectionRemember{
+        //     color:#919191;
+        //     font-weight: 400;
+        //     font-size: 0.7rem;
+        //     font-family: "Raleway", sans-serif;
+        //   }
+        // }
+        .loginSectionFieldActions{
           width:100%;
-          padding: 10px 15px;
-          color:#6e6e6e;
-          font-weight: 400;
-          font-size: 1rem;
-          font-family: "Raleway", sans-serif;
-          border-radius: 5px;
-          border:1px solid #cecece;
-        }
-      }
-      // .loginSectionCheck{
-      //   display: flex;
-      //   flex-direction: row;
-      //   .loginSectionCheckbox{
-      //     height:auto;
-      //     border-radius: 5px;
-      //     border:1px solid #cecece;
-      //   }
-      //   .loginSectionRemember{
-      //     color:#919191;
-      //     font-weight: 400;
-      //     font-size: 0.7rem;
-      //     font-family: "Raleway", sans-serif;
-      //   }
-      // }
-      .loginSectionFieldActions{
-        width:100%;
-        margin-top: 50px;
-        .loginSectionSubmit{
-          width:100%;
-          background-color: #8a2be2;
-          border: 1px solid #8a2be2;
-          border-radius: 10px;
-          color: white;
-          padding:10px;
-          cursor: pointer;
-          font-size: 1rem;
-          font-weight: 500;
-          font-family: "Raleway", sans-serif;
-          transition:0.3s ease-in-out;
-          &:hover{
-            background-color: #a553f1;
+          margin-top: 50px;
+          .loginSectionSubmit{
+            width:100%;
+            background-color: #8a2be2;
+            border: 1px solid #8a2be2;
+            border-radius: 10px;
+            color: white;
+            padding:10px 15px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: "Raleway", sans-serif;
+            transition:0.3s ease-in-out;
+            &:hover{
+              background-color: #a553f1;
+            }
           }
         }
       }
@@ -110,13 +149,12 @@
     font-family: "Raleway", sans-serif;
   }
   .btnLogin{
-    color: #9e9e9e;
+    color: #a553f1;
     padding:0;
     cursor: pointer;
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     font-family: "Raleway", sans-serif;
-    text-decoration: none;
   &:hover{
     text-decoration: underline;
     color: #757575;
@@ -136,13 +174,12 @@
     font-family: "Raleway", sans-serif;
   }
   .btnSignup{
-    color: #9e9e9e;
+    color: #a553f1;
     padding:0;
     cursor: pointer;
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     font-family: "Raleway", sans-serif;
-    text-decoration: none;
     &:hover{
       text-decoration: underline;
       color: #757575;

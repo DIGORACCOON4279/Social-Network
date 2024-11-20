@@ -1,33 +1,45 @@
-<h2>Sign up</h2>
-<%= link_to 'Volver al Home', root_path %>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Your Name" %>
+<section class="signupSection">
+  <div class="signupSectionHome">
+    <%= link_to 'Retornar inicio', root_path, class: "homeLink" %>
   </div>
+  <div class="signupSectionContainer">
+    <section class="signupForm">
+      <h2 class="signupSectionTitle">Sign up</h2>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "signupSectionForm"}) do |f| %>
+
+        <div class="signupSectionField">
+          <%= f.label :nombre, class: "nameSectionlabel" %>
+          <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "signupSectionName" %>
+        </div>
+
+        <div class="signupSectionField">
+          <%= f.label :email, class: "emailSectionlabel" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "signupSectionEmail" %>
+        </div>
+
+        <div class="signupSectionField">
+          <%= f.label :password, class: "passwordSectionlabel" %>
+          <%= f.password_field :password, autocomplete: "new-password", class: "signupSectionPassword" %>
+          <% if @minimum_password_length %>
+          <em class= "minimumPasswordLength" >(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %>
+        </div>
+
+        <div class="signupSectionField">
+          <%= f.label :confirmación_de_password, class: "confirmationPasswordSectionlabel" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "signupSectionConfirmationPassword" %>
+        </div>
+
+        <!-- Renderizamos los mensajes de error de Devise -->
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="signupSectionFieldActions">
+          <%= f.submit "Sign up", class: "signupSectionSubmit" %>
+        </div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+    </section>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>

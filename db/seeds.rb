@@ -21,3 +21,8 @@ user5.save
 # else
 #   puts "Error al guardar el usuario: #{user5.errors.full_messages}"
 # end
+User.create([
+  { email: "user1@example.com", password: "password123", name: "User One" },
+  { email: "user2@example.com", password: "password123", name: "User Two" },
+  { email: "user3@example.com", password: "password123", name: "User Three" }
+])

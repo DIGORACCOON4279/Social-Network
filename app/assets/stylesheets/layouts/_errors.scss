@@ -1,0 +1,33 @@
+/* Estilos para la explicación del error */
+.errorExplanation {
+  width:fit-content;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: "Raleway", sans-serif;
+  .errorTitle {
+    text-align: left;
+    color: #721c24;
+    font-size: 0.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .errorList {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0;
+    .errorItem {
+      color: #721c24;
+      font-size: 0.6em;
+      margin-bottom: 5px;
+      &::before {
+      content: "⚠️";
+      }
+    }
+  }
+}

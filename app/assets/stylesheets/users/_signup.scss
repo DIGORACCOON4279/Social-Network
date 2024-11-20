@@ -1,0 +1,138 @@
+.signupSection{
+  width:100%;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  .signupSectionHome{
+    width:100%;
+    height:auto;
+    display:flex;
+    .homeLink{
+      width:auto;
+      height: auto;
+      background-color: #000000;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      color: white;
+      margin:10px;
+      padding:10px 15px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      font-family: "Raleway", sans-serif;
+      text-decoration: none;
+      transition:0.3s ease-in-out;
+      &:hover{
+        color: #000000;
+        background-color: #ffffff;
+      }
+    }
+  }
+  .signupSectionContainer{
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:50px auto ;
+    .signupForm{
+      width:400px;
+      min-width:250px;
+      height:auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      background-color: #ffffff;
+      box-shadow: 4px 4px 16px 4px #cfcfcf;
+      padding:25px;
+      .signupSectionTitle{
+        color:#424242;
+        font-weight: 400;
+        font-size: 2rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+      .signupSectionForm{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        .signupSectionField{
+          width:100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap:5px;
+          .nameSectionlabel,
+          .emailSectionlabel,
+          .passwordSectionlabel,
+          .confirmationPasswordSectionlabel{
+            width:100%;
+            color:#424242;
+            font-weight: 600;
+            font-size: 0.8rem;
+            font-family: "Raleway", sans-serif;
+          }
+          .signupSectionName,
+          .signupSectionEmail,
+          .signupSectionPassword,
+          .signupSectionConfirmationPassword{
+            width:100%;
+            margin:0;
+            padding: 10px;
+            color:#6e6e6e;
+            font-weight: 400;
+            font-size: 1rem;
+            font-family: "Raleway", sans-serif;
+            border-radius: 5px;
+            border:1px solid #cecece;
+            box-sizing: border-box;
+            transition:0.3s ease-in-out;
+            &:focus{
+              border: 1px solid #8a2be2;
+              outline: none;
+            }
+          }
+          .minimumPasswordLength{
+            color: #9e9e9e;
+            padding:0;
+            cursor: pointer;
+            font-size: 0.6rem;
+            font-weight: 500;
+            font-family: "Raleway", sans-serif;
+            text-decoration: none;
+          }
+        }
+        .signupSectionFieldActions{
+          width:100%;
+          margin-top: 30px;
+          .signupSectionSubmit{
+            width:100%;
+            background-color: #8a2be2;
+            border: 1px solid #8a2be2;
+            border-radius: 10px;
+            color: white;
+            padding:10px 15px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: "Raleway", sans-serif;
+            transition:0.3s ease-in-out;
+            &:hover{
+              background-color: #a553f1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
