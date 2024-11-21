@@ -1,0 +1,154 @@
+
+.section-services{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 150px;
+  margin: auto;
+  background-color: $deep-gray;
+  .subtitle{
+    color: $gray;
+    font-size: 30px ;
+    font-weight: 600;
+    padding-bottom: 150px;
+    padding-top: 150px;
+    text-align: center;
+    font-family: $main-font;
+  }
+  .cards-services{
+    width:80%;
+    height: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap:90px;
+    .services{
+      position:relative;
+      width: 250px;
+      height: 300px;
+      background-color:#1F252D ;
+      text-align:center;
+      border-radius: 8px;
+      padding-bottom: 30px;
+      cursor: pointer;
+      padding-top:20px;
+      margin: auto;
+      &::before{
+        content:"";
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        margin:auto;
+        clip-path: circle(18.9% at 50% 23%);
+        transition: .2s ease-in-out;
+      }
+      &::after{
+        content:"";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 20px;
+        color: $light-gray;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: $main-font;
+        transform: translateY(-120%) scale(0%);
+        transition: transform 0.3s ease-in-out;
+      }
+      &:nth-child(1):hover::before,
+      &:nth-child(3):hover::before,
+      &:nth-child(5):hover::before{
+        content:"";
+        background-color: $light-red-opacity;
+        box-shadow:  0 0 32px 1px $black;
+        clip-path: circle(100% at 51% 34%);
+      }
+      &:nth-child(1):hover::after{
+        content:"Mantente conectado con tus personas mas cercanas";
+        transform: translateY(23%) scale(100%);
+        color: $light-gray;
+        font-size: 14px ;
+        text-wrap:balance;
+      }
+      &:nth-child(3):hover::after{
+        content:"Dejanos tu seguridad en nuestras manos mientras chateas con los tuyos";
+        transform: translateY(23%) scale(100%);
+        color: $light-gray;
+        font-size: 14px ;
+        text-wrap:balance;
+      }
+      &:nth-child(5):hover::after{
+        content:"Perfil seguro, confidencialidad y recomendaciones en tiempo real";
+        transform: translateY(23%) scale(100%);
+        color: $light-gray;
+        font-size: 14px ;
+        text-wrap:balance;
+      }
+      &:hover > .title-card{
+        content:"";
+        display: none;
+      }
+      &:nth-child(2):hover::before,
+      &:nth-child(4):hover::before,
+      &:nth-child(6):hover::before{
+        content:"";
+        background-color: $light-blue-opacity;
+        box-shadow:  0 0 32px 1px var(--black);
+        clip-path: circle(100% at 51% 34%);
+      }
+      &:nth-child(2):hover::after{
+        content:"Administra tu perfil y crea tus grupos favoritos";
+        transform: translateY(23%) scale(100%);
+        color: $light-gray;
+        font-size: 14px ;
+        text-wrap:balance;
+      }
+      &:nth-child(4):hover::after{
+        content:"Disfruta de tus conversaciones mientras tu privacidad este segura";
+        transform: translateY(23%) scale(100%);
+        color: $light-gray;
+        font-size: 14px ;
+        text-wrap:balance;
+      }
+      &:nth-child(6):hover::after{
+        content:"Red global y apoyo donde y con quien te encuentres";
+        transform: translateY(23%) scale(100%);
+        color: $light-gray;
+        font-size: 14px ;
+        text-wrap:balance;
+      }
+      &:hover > .title-card{
+        content:"";
+        display: none;
+      }
+      &:hover > .item-services{
+        transform: scale(110%, 110%);
+      }
+    }
+    .item-services{
+      width: 70px;
+      padding: 30px 0;
+      transform: scale(100%, 100%);
+      transition: .5s;
+    }
+    .title-card{
+      font-size: 18px ;
+      font-weight: 600;
+      padding: 0px 50px;
+      font-family: $main-font;
+      width: 100%;
+      height: auto;
+      font-size: 20px;
+      color: $gray;
+      text-align: center;
+    }
+  }
+}
