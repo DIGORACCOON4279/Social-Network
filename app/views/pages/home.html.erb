@@ -1,6 +1,89 @@
-<h1>Bienvenido a nuestra aplicación</h1>
+<!-- <h1>Bienvenido a nuestra aplicación</h1>
 <p>Inicia sesión o regístrate para comenzar.</p>
-<%= link_to 'Iniciar sesión', new_user_session_path, class: 'btnLogin' %> |
-<%= link_to 'Registrarse', new_user_registration_path, class: 'btnSignup' %> |
+
 <%= link_to 'Acerca de', about_path, class: 'about' %> |
-<%= link_to 'Contacto', contact_path, class: 'contact' %>
+<%= link_to 'Contacto', contact_path, class: 'contact' %> -->
+
+
+    <!-- Header -->
+
+      <header class="navbar" id="navbar">
+        <div class="menu-navbar">
+            <a href="" class="logo-click">
+              <%= image_tag 'logos/logo-all-in-one.webp', alt: 'Logo', class: "logo" %>
+            </a>
+            <div class="navbar-section">
+              <nav class="menu">
+                <%= link_to '#home', class: 'list-item' do %>
+                  <i class='bx bx-home-alt-2'></i>
+                <% end %>
+
+                <%= link_to '#chat', class: 'list-item' do %>
+                  <i class='bx bx-chat'></i>
+                <% end %>
+
+                <%= link_to '#rocket', class: 'list-item' do %>
+                  <i class='bx bx-rocket'></i>
+                <% end %>
+
+                <%= link_to '#station', class: 'list-item' do %>
+                  <i class='bx bx-station'></i>
+                <% end %>
+
+                <%= link_to '#help', class: 'list-item' do %>
+                  <i class='bx bx-help-circle'></i>
+                <% end %>
+              </nav>
+                <%= link_to 'Registrarse', new_user_registration_path, class: 'cta-register' %>
+              </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+
+    <main class="main-container">
+
+    <!-- HeroSection -->
+
+    <section class="container-hero-section">
+        <div class="hero-section">
+            <section class="section-hero-section">
+                <div class="banner" data-aos="fade-right">
+                    <h1 class="title">Add messaging and live chat to your website or mobile app,
+                    <span class="subtitle">and leverage customer presence on social channels</span></h1>
+                    <div class="cta">
+                      <%= link_to 'Iniciar sesión', new_user_session_path, class: 'cta-start' %>
+                      <%= link_to 'Registrarse', new_user_registration_path, class: 'cta-register' %>
+                    </div>
+                    <div class="social-media">
+                      <%= link_to 'https://es-la.facebook.com/', target: '_blank' do %>
+                        <i class="bx bxl-facebook-circle"></i>
+                      <% end %>
+
+                      <%= link_to 'https://www.instagram.com/', target: '_blank' do %>
+                        <i class="bx bxl-instagram-alt"></i>
+                      <% end %>
+
+                      <%= link_to 'https://www.youtube.com/', target: '_blank' do %>
+                        <i class="bx bxl-youtube"></i>
+                      <% end %>
+
+                      <%= link_to 'https://twitter.com/?lang=es', target: '_blank' do %>
+                        <i class="bx bxl-twitter"></i>
+                      <% end %>
+                    </div>
+
+                </div>
+                <%= image_tag 'illustrations/laptop.webp', alt: 'Laptop', class: 'laptop', data: { aos: 'fade-left' } %>
+
+            </section>
+        </div>
+        <%= link_to '#', class: 'arrow' do %>
+          <i class='bx bx-up-arrow-circle bx-tada bx-flip-vertical' style="font-size:50px; color:white; position:fixed; right:30px; bottom: 30px; z-index:100;"></i>
+        <% end %>
+        <%= link_to 'https://web.whatsapp.com/', target: '_blank', class: 'arrow' do %>
+          <%= image_tag 'icons/whatsapp.svg', class: 'whatsapp-logo', style: 'width:43px; position:fixed; left:30px; bottom:30px; z-index:100;' %>
+        <% end %>
+    </section>
+
+</main>

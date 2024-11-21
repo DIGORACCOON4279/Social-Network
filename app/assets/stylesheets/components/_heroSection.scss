@@ -1,3 +1,132 @@
 
 
 
+.container-hero-section{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #030207;
+  background-image: url("/images/backgroundHeroSection.webp");
+  background-position: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .hero-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items:  center;
+    gap:0px;
+    background: linear-gradient(to right, #4d197abd, #892be21e);
+    animation:background 30s linear infinite;
+    @keyframes background {
+      0%{
+          backdrop-filter: blur(0px);
+      }
+      20%{
+          backdrop-filter: blur(2px);
+      }
+      40%{
+          backdrop-filter: blur(4px);
+      }
+      60%{
+          backdrop-filter: blur(3px);
+      }
+      80%{
+          backdrop-filter: blur(1px);
+      }
+      100%{
+          backdrop-filter: blur(0px);
+      }
+    }
+    .section-hero-section{
+      max-width:1150px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0px auto 150px;
+      .banner{
+        width:50%;
+        height:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 150px;
+        gap:30px;
+        .title{
+          font-family: $main-font;
+          font-size: 35px;
+          font-weight: 600;
+          color:  $light-gray;
+          margin: 0px 0px 20px;
+          text-wrap:balance;
+        }
+        .subtitle{
+          font-family: $main-font;
+          font-size: 25px;
+          font-weight: 600;
+          color: $light-blue;
+        }
+        .cta{
+          width:100%;
+          height:auto;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          gap:20px;
+          .cta-start,
+          .cta-register{
+            width:100%;
+            text-decoration: none;
+            color: $white;
+            font-family: v$main-font;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: $hotpink;
+            border: 1px solid $hotpink;
+            text-align: center;
+            transition: .5s;
+          }
+          .cta-start:hover{
+            background-color: $light-blue;
+            border: 1px solid $white;
+            box-shadow: 0 0 5px $white;
+            color: $white;
+          }
+          .cta-register{
+            background-color: transparent;
+            border: 1px solid $white;
+            &:hover{
+              box-shadow: 0 0 10px $white;
+              background-color: $light-blue;
+              border: 1px solid$white;
+            }
+          }
+        }
+        .social-media{
+          width:100%;
+          display: flex;
+          flex-direction: row;
+          justify-content:flex-start;
+          align-items:center;
+          gap:0px;
+          .bx{
+            font-size: 25px;
+            color: $light-blue;
+            margin:0px 7px;
+          }
+        }
+      }
+      .laptop{
+        width:100%;
+      }
+    }
+  }
+}

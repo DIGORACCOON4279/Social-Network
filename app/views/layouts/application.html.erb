@@ -6,14 +6,31 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <title>AllInOne Social Media</title>
+
+    <!-- Hoja de estilo externa de Boxicons -->
+    <%= stylesheet_link_tag 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' %>
+
+    <!-- Hoja de estilo externa de Normalize CSS -->
+
+    <%= stylesheet_link_tag 'https://necolas.github.io/normalize.css/8.0.1/normalize.css' %>
+      <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
+    <!-- Favicon -->
+    <%= favicon_link_tag 'logos/vector-logo.svg', type: 'image/png', sizes: '16x16' %>
+    <%= favicon_link_tag 'logos/vector-logo.svg', type: 'image/png', sizes: '32x32' %>
+    <%= favicon_link_tag 'logos/vector-logo.svg', type: 'image/png', sizes: '64x64' %>
+
     <!-- Stylesheets -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
-    <!-- Googlefont -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Preconexión a Google Fonts -->
+    <%= tag.link(rel: 'preconnect', href: 'https://fonts.googleapis.com') %>
+    <%= tag.link(rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true) %>
+
+    <!-- Carga de fuente de Google Fonts (Raleway) -->
+    <%= tag.link(href: 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap', rel: 'stylesheet') %>
   </head>
 
   <body>
