@@ -1,0 +1,113 @@
+
+.section-cards-profiles{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 150px;
+  margin: auto;
+  background-color: $dark;
+  .subtitle{
+    color: $gray;
+    font-size: 30px ;
+    font-weight: 600;
+    padding-bottom: 150px;
+    padding-top: 150px;
+    font-family: $main-font;
+    text-align: center;
+    span{
+      color: $light-blue;
+    }
+  }
+  .cards-clients{
+    width: 90%;
+    max-width:1200px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 99;
+    .card{
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      background-color: $deep-gray;
+      justify-content: space-around;
+      border-radius: 8px;
+      transition: 0.5s ease-in-out;
+      &:hover{
+        box-shadow: 0 0 5px $light-blue;
+      }
+      figure{
+        overflow: hidden;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        .services{
+          width: auto;
+          height: auto;
+          text-align: left;
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+          filter: grayscale(40%);
+          transform: scale(108%);
+          transition: transform .5s ease-in-out;
+        }
+      }
+      &:hover > figure .services{
+        transform: scale(115%);
+        filter: grayscale(20%);
+      }
+      .text{
+        padding: 0px 20px;
+        width:250px;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        padding: 20px 0px 20px 20px;
+        background-color: $deep-gray;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        h3{
+          color: $light-blue;
+          font-size: 20px ;
+          font-family: $main-font;
+        }
+        p{
+          color: $light-gray;
+          font-size: 12px ;
+          font-weight: 500;
+          line-height: 15px;
+          letter-spacing: 1.5px;
+          font-family: $main-font;
+          text-wrap:balance;
+          span {
+            color:  $light-blue;
+          }
+        }
+        .plan{
+          color: $light-blue;
+          font-size: 14px ;
+          font-weight: 500;
+          font-family: $main-font;
+          text-decoration: none;
+          transition:.5s;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .flaticon{
+    width:45px;
+    height:auto;
+    align-self: end;
+  }
+}
