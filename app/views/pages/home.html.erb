@@ -191,9 +191,82 @@
             <figure class="cellphone-img" data-aos="fade-up">
               <%= image_tag 'illustrations/cellphones.webp', alt: 'Cellphones', class: "cellphones" %>
             </figure>
-            <a href="#" class="passwords-cta">Crea tu perfil</a>
-        </section>
+            <%= link_to 'Crea tu perfil', new_user_registration_path, class: 'passwords-cta' %>
+          </section>
     </section>
+
+     <!-- Section Plan -->
+
+     <section class="section-plan">
+      <section class="section-wrap">
+          <h2 class="subtitle">Adquiere <span>Ya tu plan!!!</span></h2>
+          <div class="cards">
+              <div class="card-personal" data-aos="fade-left">
+                  <h3>Personal All In One</h3>
+                  <%= image_tag 'icons/flaticon-2.svg', alt: 'Plans', class: "services-img" %>
+                  
+                  <div class="article-text">
+                      <div class="article">
+                        <%= image_tag 'icons/check-list-favicon.svg', alt: 'Plans', class: "services" %>
+                        <p>Optimización de Conexiones</p>
+                      </div>
+                      <div class="article">
+                        <%= image_tag 'icons/check-list-favicon.svg', alt: 'Plans', class: "services" %>
+                          <p>Soporte Prioritario</p>
+                      </div>
+                      <div class="article">
+                        <%= image_tag 'icons/check-list-favicon.svg', alt: 'Plans', class: "services" %>
+                          <p>Actualizaciones Exclusivas</p>
+                      </div>
+                      <div class="article">
+                        <%= image_tag 'icons/cancel-list-favicon.svg', alt: 'Plans', class: "services" %>
+                          <p>Crea tus propias categorias</p>
+                      </div>
+                      <div class="article">
+                        <%= image_tag 'icons/cancel-list-favicon.svg', alt: 'Plans', class: "services" %>
+                          <p>Crea y administra sus grupos</p>
+                      </div>
+                  </div>
+
+                  <!-- Corregir ruta luego -->
+
+                  <%= link_to 'Registrarse', new_user_registration_path, class: 'cta-personal-plan' %>
+                </div>
+
+              <div class="card-premium" data-aos="fade-right">
+                  <h3>Profesional All In One</h3>
+                  <%= image_tag 'icons/flaticon-10.svg', alt: 'Plans', class: "services-img" %>
+
+                  <div class="article-text">
+                      <div class="article">
+                        <%= image_tag 'icons/check-list-favicon.svg', alt: 'Plans', class: "services" %>
+                          <p>Optimización de Conexiones</p>
+                      </div>
+                      <div class="article">
+                        <%= image_tag 'icons/check-list-favicon.svg', alt: 'Plans', class: "services" %>
+                          <p>Soporte Prioritario</p>
+                      </div>
+                      <div class="article">
+                        <%= image_tag 'icons/check-list-favicon.svg', alt: 'Plans', class: "services" %>
+                          <p>Actualizaciones Exclusivas</p>
+                      </div>
+                      <div class="article">
+                        <%= image_tag 'icons/check-list-favicon.svg', alt: 'Plans', class: "services" %>
+                          <p>Crea tus propias categorias</p>
+                      </div>
+                      <div class="article">
+                        <%= image_tag 'icons/check-list-favicon.svg', alt: 'Plans', class: "services" %>
+                          <p>Crea y administra sus grupos</p>
+                      </div>
+                    </div>
+
+                  <!-- Corregir ruta luego -->
+
+                  <%= link_to 'Registrarse', new_user_registration_path, class: 'cta-premium-plan' %>
+                </div>
+          </div>
+      </section>
+  </section>
 
 </main>
 

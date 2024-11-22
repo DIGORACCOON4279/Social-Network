@@ -1,0 +1,115 @@
+.section-plan{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 150px;
+  margin: auto;
+  background-color: $deep-gray;
+  .subtitle{
+    color: $gray;
+    font-size: 30px ;
+    font-weight: 800;
+    padding-bottom: 150px;
+    padding-top: 150px;
+    font-family: $main-font;
+    span{
+      color: $light-blue;
+    }
+  }
+  .cards{
+    width:80%;
+    max-width: 1200px;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    .services{
+      width:25px;
+      border-radius: 100%;
+    }
+    .card-premium,
+    .card-personal{
+      .services-img{
+        width: 55px;
+      }
+      .article-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap:10px;
+      }
+      h3{
+        color: $hotpink;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: $main-font;
+      }
+      .cta-premium-plan,
+      .cta-personal-plan{
+        width:100%;
+        padding: 15px;
+        color: $white;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: $main-font;
+        background-color: $light-blue;
+        border-radius: 8px;
+        text-decoration: none;
+        text-align: center;
+        border: 1px solid $light-blue;
+        margin-top:20px;
+        transition: .5s;
+        &:hover{
+          background-color: $deep-gray;
+          border: 1px solid $white;
+          color:$white;
+          box-shadow: 0 0 5px $white;
+        }
+      }
+      .article{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:20px;
+        padding: 5px 0;
+        text-align: left;
+        p{
+          width:100%;
+          color: $light-gray;
+          font-size: 14px;
+          font-weight: 500;
+          text-wrap:balance;
+          font-family: $main-font;
+        }
+      }
+    }
+    .card-premium,
+    .card-personal{
+      width:280px;
+      height:auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      background-color: $black;
+      border-radius: 8px;
+      box-shadow: 0 0 5px $white;
+      padding: 30px;
+      text-align: center;
+      .cta-personal-plan{
+        background-color: $hotpink;
+        &:hover{
+          background-color: $deep-gray;
+        }
+      }
+    }
+    .card-premium h3{
+      color: $blue;
+    }
+  }
+}
