@@ -9,7 +9,7 @@
 
       <header class="navbar" id="navbar">
         <div class="menu-navbar">
-            <a href="" class="logo-click">
+            <a href="#" class="logo-click">
               <%= image_tag 'logos/logo-all-in-one.webp', alt: 'Logo', class: "logo" %>
             </a>
             <div class="navbar-section">
@@ -72,7 +72,6 @@
                         <i class="bx bxl-twitter"></i>
                       <% end %>
                     </div>
-
                 </div>
                 <%= image_tag 'illustrations/laptop.webp', alt: 'Laptop', class: 'laptop', data: { aos: 'fade-left' } %>
 
@@ -175,3 +174,60 @@
   </section>
 
 </main>
+
+  <!-- Footer -->
+
+  <footer class="footer-container">
+    <section class="section-wrap">
+        <div class="footer">
+            <section class="column-1-footer">
+              <a href="#" class="logo-click">
+                <%= image_tag 'logos/logo-all-in-one.webp', alt: 'Logo', class: "logo" %>
+              </a>
+                <div class="column-social-media">
+                    <p>Medellin | Colombia</p>
+                    <div class="social-media">
+                      <%= link_to 'https://es-la.facebook.com/', target: '_blank' do %>
+                        <i class="bx bxl-facebook-circle"></i>
+                      <% end %>
+
+                      <%= link_to 'https://www.instagram.com/', target: '_blank' do %>
+                        <i class="bx bxl-instagram-alt"></i>
+                      <% end %>
+
+                      <%= link_to 'https://www.youtube.com/', target: '_blank' do %>
+                        <i class="bx bxl-youtube"></i>
+                      <% end %>
+
+                      <%= link_to 'https://twitter.com/?lang=es', target: '_blank' do %>
+                        <i class="bx bxl-twitter"></i>
+                      <% end %>
+                    </div>
+                </div>
+            </section>
+            <section class="column-2-footer">
+                <h4>Conectate con All In One</h4>
+                <nav class="connect-all-in-one">
+                    <ul>
+                        <li><a href="" class="item">Soporte al cliente</a></li>
+                        <li><a href="" class="item">Politica de privacidad</a></li>
+                        <li><a href="" class="item">Terminos y condiciones</a></li>
+                        <li><a href="" class="item">Servicios externos</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="column-3-footer">
+                <h4>Acerca de All In One</h4>
+                <nav class="about-all-in-one">
+                    <ul>
+                        <li><a href="" class="item">Que es All In One</a></li>
+                        <li><a href="" class="item">Nuestra identidad</a></li>
+                        <li><a href="" class="item">Marca y logotipo</a></li>
+                        <li><a href="" class="item">Mision y vision</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+        <p class="made-by">- Hecho con <span> ❤ </span>  por Diego Marin | 2023 | Colombia - Canada -</p>
+    </section>
+  </footer>
