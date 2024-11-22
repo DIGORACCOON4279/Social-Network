@@ -1,0 +1,85 @@
+.section-passwords-free{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 150px;
+  margin: auto;
+  background-color: $deep-gray;
+  background-image: image-url("backgrounds/background-color-blue.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .cellphones-chat{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:80px;
+    text-align: center;
+    .titles{
+      .subtitle{
+        color: $gray;
+        font-size: 30px ;
+        font-weight: 600;
+        margin-top:150px;
+        margin-bottom: 25px;
+        font-family: $main-font;
+        span{
+          color: $light-blue;
+        }
+      }
+      .info{
+        margin-bottom:50px;
+        .subtitle-content{
+          color: $light-gray;
+          font-size: 25px ;
+          font-weight: 600;
+          font-family: $main-font;
+          margin-bottom: 10px;
+          text-wrap:balance;
+        }
+        p{
+          color: $light-gray;
+          font-size: 16px ;
+          font-weight: 600;
+          font-family: $main-font;
+          text-wrap:balance;
+        }
+
+      }
+    }
+    .cellphone-img{
+      width:auto;
+      height:auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 99;
+      .cellphones{
+        width:85%;
+        height:auto;
+      }
+    }
+    .passwords-cta{
+      width:20%;
+      text-decoration: none;
+      color: $white;
+      font-family: $main-font;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      background-color: transparent;
+      border: 1px solid $white;
+      transition: .5s;
+      &:hover{
+        box-shadow: 0 0 10px $white;
+        background-color: $light-blue;
+      }
+    }
+  }
+}
+
+
