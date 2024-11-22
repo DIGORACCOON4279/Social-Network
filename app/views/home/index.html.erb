@@ -1,4 +1,4 @@
-<section class="homeDashboard">
+<!-- <section class="homeDashboard">
   <div class="homeDashboardContainer">
     <h1 class="homeDashboardTitle">Dasboard</h1>
 
@@ -18,4 +18,733 @@
       <%= link_to 'Registrarse', new_user_registration_path, class: 'btnSignup' %>
     <% end %>
   </div>
-</section>
+</section> -->
+
+
+    <!-- Header -->
+
+    <header class="header-dashboard">
+        <div class="center-dashboard">
+            <div class="left-side">
+              <%= image_tag 'logos/vector-logo.svg', alt: 'Logo', class: "vector-logo" %>
+              <p>Dashboard | All in One</p>
+            </div>
+            <div class="right-side">
+                <dic class="message-right-side">
+                    <label for="scroll" class="scroll__label">
+                      <%= image_tag 'icons/vector-bell.svg', alt: 'Bell', class: "vector-bell" %>
+                    </label>
+                    <input type="checkbox" id="scroll" class="scroll__input">
+                    <div class="scroll-bar">
+                        <label for="scroll" class="scroll__label">
+                        </label>
+                        <div class="msn">
+                            <h3>Lorem Ipsum</h3>
+                            <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Voluptates deleniti pariatur earum quibusdam velit! Ex mollitia vitae
+                                soluta a, nobis consectetur? Quod in id nam laboriosam consectetur alias
+                                omnis dolorum?</p>
+                        </div>
+                        <div class="msn">
+                            <h3>Lorem Ipsum</h3>
+                            <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Voluptates deleniti pariatur earum quibusdam velit! Ex mollitia vitae
+                                soluta a, nobis consectetur? Quod in id nam laboriosam consectetur alias
+                                omnis dolorum?</p>
+                        </div>
+                        <div class="msn">
+                            <h3>Lorem Ipsum</h3>
+                            <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Voluptates deleniti pariatur earum quibusdam velit! Ex mollitia vitae
+                                soluta a, nobis consectetur? Quod in id nam laboriosam consectetur alias
+                                omnis dolorum?</p>
+                        </div>
+                        <div class="msn">
+                            <h3>Lorem Ipsum</h3>
+                            <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Voluptates deleniti pariatur earum quibusdam velit! Ex mollitia vitae
+                                soluta a, nobis consectetur? Quod in id nam laboriosam consectetur alias
+                                omnis dolorum?</p>
+                        </div>
+                        <div class="msn">
+                            <h3>Lorem Ipsum</h3>
+                            <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Voluptates deleniti pariatur earum quibusdam velit! Ex mollitia vitae
+                            soluta a, nobis consectetur? Quod in id nam laboriosam consectetur alias
+                            omnis dolorum?</p>
+                        </div>
+                        <div class="msn">
+                            <h3>Lorem Ipsum</h3>
+                            <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Voluptates deleniti pariatur earum quibusdam velit! Ex mollitia vitae
+                                soluta a, nobis consectetur? Quod in id nam laboriosam consectetur alias
+                                omnis dolorum?</p>
+                        </div>
+                        <div class="msn">
+                            <h3>Lorem Ipsum</h3>
+                            <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Voluptates deleniti pariatur earum quibusdam velit! Ex mollitia vitae
+                            soluta a, nobis consectetur? Quod in id nam laboriosam consectetur alias
+                            omnis dolorum?</p>
+                        </div>
+                        <div class="msn">
+                            <h3>Lorem Ipsum</h3>
+                            <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Voluptates deleniti pariatur earum quibusdam velit! Ex mollitia vitae
+                                soluta a, nobis consectetur? Quod in id nam laboriosam consectetur alias
+                                omnis dolorum?</p>
+                        </div>
+                        <div class="msn">
+                            <h3>Lorem Ipsum</h3>
+                            <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Voluptates deleniti pariatur earum quibusdam velit! Ex mollitia vitae
+                                soluta a, nobis consectetur? Quod in id nam laboriosam consectetur alias
+                                omnis dolorum?</p>
+                        </div>
+                    </div>
+                </dic>
+
+                <div class="navbar-right-side">
+                    <label for="menu" class="nav__label">
+                      <%= image_tag 'avatars/pic-profile-man.webp', alt: 'Man', class: "pic-profile-man" %>
+                    </label>
+                    <input type="checkbox" id="menu" class="nav__input">
+                    <nav class="nav-bar">
+                        <label for="menu" class="nav__label">
+                        </label>
+                        <ul>
+                            <li>
+                                <a href="#"  class="btn__option"><i class='bx bx-user-circle'></i>Mi perfil</a>
+                            </li>
+                            <li>
+                                <a href="#"  class="btn__option"><i class='bx bx-chat'></i>Chat</a>
+                            </li>
+                            <li>
+                                <a href="#"  class="btn__option"><i class='bx bx-group'></i></i>Contactos</a>
+                            </li>
+                            <li>
+                              <% if user_signed_in? %>
+
+                              <%= form_for :destroy_user_session, url: destroy_user_session_path, method: :delete, html: { class: 'homeDashboardSignOutForm' } do %>
+                                <%= submit_tag 'Sign out', class: 'homeDashboardBtnSignOut' %>
+                              <% end %>
+
+                            <% else %>
+                              <%= link_to 'Iniciar sesión', new_user_session_path, class: 'btnLogin' %>
+                              <%= link_to 'Registrarse', new_user_registration_path, class: 'btnSignup' %>
+                            <% end %>
+                            </li>
+
+                            <!-- <li>
+                                <a href="../index.html"  class="btn__option"><i class='bx bx-exit'></i>Salir</a>
+                            </li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main-Container--Dashboard -->
+
+
+    <main class="main-container-dashboard">
+
+        <section class="section-menu">
+            <section class="navbar-side-left">
+                <input type="checkbox" id="btn-menu">
+                <label for="btn-menu" class="icon-menu">
+                    <i class='bx bx-menu'></i>
+                </label>
+                <section class="container-side-left">
+                    <label for="btn-menu" class="icon-equis">
+                        <i class='bx bx-arrow-from-right'></i>
+                    </label>
+                    <div class="menu-list">
+                        <div class="data-profile">
+                          <%= image_tag 'avatars/pic-profile-man.webp', alt: 'Man', class: "pic-profile-man" %>
+                            <p class="name">Robert Fox</p>
+                            <p class="email">robert@mail.com</p>
+                            <progress max="100" min="0" value="85"></progress>
+                        </div>
+                        <nav class="navbar1">
+                            <ul>
+                                <li>
+                                    <a href="#" class="links"><i class='bx bx-user-circle'></i>Inicio</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="links"><i class='bx bx-chat'></i>Chat social</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="links"><i class='bx bx-conversation'></i>Chat profesional</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="links"> <i class='bx bx-network-chart'></i>Gestion de equipos</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="links"><i class='bx bx-cog'></i>Configuración</a>
+                                </li>
+                                <li>
+                                    <a href="room-help.html" class="links" target="_blank"><i class='bx bx-support'></i>Ayuda</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+            </section>
+        </section>
+
+    <!-- Section Body -->
+
+        <section class="section-body">
+
+            <section class="navbar-side-right">
+                <form action="" class="search-form">
+                    <label for="" class="search-content">
+                        <input type="text" placeholder="Solicitud..." class="search">
+                    </label>
+                    <input type="submit" value="Buscar" class="search-btn">
+                </form>
+
+                <input type="checkbox" id="grid">
+                <label for="grid" class="grid-icon">
+                    <i class='bx bxs-grid'></i>
+                </label>
+                <nav class="navbar-body">
+                    <label for="grid" class="grid-icon">
+                        <i class='bx bxs-close'></i>
+                    </label>
+
+                    <ul class="navbar-categories">
+                        <li>
+                            <span class="icon">🤗💬</span>
+                            <a href="#" class="category">Categorias</a>
+                        </li>
+                        <li>
+                            <span class="icon">🏷️🤝</span>
+                            <a href="#" class="category">Crear categorias</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-teams">
+                        <li>
+                            <span class="icon">🎯🔗</span>
+                            <a href="#" class="team">Grupo</a>
+                        </li>
+                        <li>
+                            <span class="icon">🚀🤲</span>
+                            <a href="#" class="team">Crear Grupo</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="blocks">
+                <section class="card card-hotpink">
+                    <div class="block block1">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-category.webp', alt: 'Categoria', class: "category" %>
+
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-hotpink">
+                    <div class="block block1">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-category.webp', alt: 'Categoria', class: "category" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-hotpink">
+                    <div class="block block1">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-category.webp', alt: 'Categoria', class: "category" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-hotpink">
+                    <div class="block block1">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-category.webp', alt: 'Categoria', class: "category" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-hotpink">
+                    <div class="block block1">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-category.webp', alt: 'Categoria', class: "category" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-hotpink">
+                    <div class="block block1">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-category.webp', alt: 'Categoria', class: "category" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-hotpink">
+                    <div class="block block1">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-category.webp', alt: 'Categoria', class: "category" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-hotpink">
+                    <div class="block block1">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-category.webp', alt: 'Categoria', class: "category" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-hotpink">
+                    <div class="block block1">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-category.webp', alt: 'Categoria', class: "category" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-hotpink">
+                    <div class="block block1">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-category.webp', alt: 'Categoria', class: "category" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-hotpink">
+                    <div class="block block1">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-category.webp', alt: 'Categoria', class: "category" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-hotpink">
+                    <div class="block block1">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-category.webp', alt: 'Categoria', class: "category" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+                <section class="card card-blue">
+                    <div class="block block2">
+
+                        <!-- Background-image in CSS -->
+                        <%= image_tag 'illustrations/illustration-group.webp', alt: 'Grupo', class: "group" %>
+
+                    </div>
+                    <div class="info">
+                        <h3>Block 1</h3>
+                        <p class="paragraph">
+                            Categoria
+                        </p>
+                        <p class="paragraph">
+                            Equipo
+                        </p>
+                    </div>
+                    <a href="" class="link">Link</a>
+                </section>
+            </section>
+        </section>
+
+    </main>
