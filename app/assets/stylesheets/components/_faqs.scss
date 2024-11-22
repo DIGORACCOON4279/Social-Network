@@ -1,0 +1,63 @@
+.questions-answers{
+  width:80%;
+  height:auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 150px;
+  h2{
+    color: $gray;
+    font-size: 30px ;
+    font-weight: 600;
+    padding-bottom: 150px;
+    padding-top: 150px;
+    font-family: $main-font;
+  }
+  .scrolldown-answers{
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    details{
+      summary{
+        color: $light-black;
+        font-size: 16px ;
+        font-weight: 600;
+        padding: 30px 0px;
+        font-family: $main-font;
+        border-bottom: 1px solid rgb(95, 94, 94);
+      }
+    }
+    details{
+      p{
+        color: $light-gray;
+        font-size: 14px ;
+        font-weight: 600;
+        padding: 30px 0px;
+        font-family: $main-font;
+        text-wrap:balance;
+        border-bottom: 1px solid rgb(95, 94, 94);
+        transition: all .2s;
+        span {
+          color: $light-blue;
+        }
+      }
+    }
+  }
+  .room-help{
+    margin: 80px 110px 0px 0px;
+    justify-content: center;
+    align-self: flex-end;
+    color: $light-blue;
+    font-size: 13px ;
+    font-weight: 600;
+    padding: 30px 0px;
+    font-family: $main-font;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
