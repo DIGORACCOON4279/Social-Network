@@ -162,9 +162,9 @@
                     </label>
                     <div class="menu-list">
                         <div class="data-profile">
-                          <%= image_tag 'avatars/pic-profile-man.webp', alt: 'Man', class: "pic-profile-man" %>
-                            <p class="name">Robert Fox</p>
-                            <p class="email">robert@mail.com</p>
+                            <%= image_tag 'avatars/pic-profile-man.webp', alt: 'Man', class: "pic-profile-man" %>
+                            <p class="name"><%= current_user.name %></p>
+                            <p class="email"><%= current_user.email %></p>
                             <progress max="100" min="0" value="85"></progress>
                         </div>
                         <nav class="navbar1">
