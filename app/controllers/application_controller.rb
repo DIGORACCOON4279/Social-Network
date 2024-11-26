@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
     # Si también quieres permitir :name en la edición del perfil
     devise_parameter_sanitizer.permit(:account_update, keys: [:name])
   end
+
+  def after_sign_in_path_for(resource)
+    dashboard_path  # Redirige siempre al dashboard después de iniciar sesión
+  end
 end
