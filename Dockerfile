@@ -112,4 +112,4 @@ RUN bundle -v
 RUN bundle install
 
 
-
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
