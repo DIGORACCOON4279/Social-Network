@@ -7,16 +7,25 @@ FROM registry.docker.com/library/ruby:$RUBY_VERSION-slim as base
 # Rails app lives here
 WORKDIR /rails
 
+
+
+
 # Set production environment
 # ENV RAILS_ENV="production" \
 #     BUNDLE_DEPLOYMENT="1" \
 #     BUNDLE_PATH="/usr/local/bundle" \
 #     BUNDLE_WITHOUT="development"
+
+# CODIGO SUMINISTRADO OR CHATGPT
+
 # Set production environment
 ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \
     BUNDLE_WITHOUT="development"
+
+
+
 
 # Ajusta los permisos del directorio de caché de bundler
 RUN mkdir -p ${BUNDLE_PATH}/cache && chmod -R 777 ${BUNDLE_PATH}/cache
@@ -35,6 +44,8 @@ RUN apt-get update -qq && \
 #     rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
 #     bundle exec bootsnap precompile --gemfile
 
+
+# CODIGO SUMINISTRADO OR CHATGPT
 # Install application gems
 COPY Gemfile Gemfile.lock ./
 RUN mkdir -p ${BUNDLE_PATH} && \
@@ -79,3 +90,26 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
 CMD ["./bin/rails", "server"]
+
+
+# CODIGO SUMINISTRADO OR CHATGPT
+
+# Usa una imagen base de Ruby (ajusta según tu versión)
+FROM ruby:3.0
+
+# Instala dependencias necesarias
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
+
+# Copia los archivos de tu proyecto al contenedor
+COPY . /Social-Network
+WORKDIR /Social-Network
+
+# Verifica las versiones de Ruby y Bundler
+RUN ruby -v
+RUN bundle -v
+
+# Instala las gemas
+RUN bundle install
+
+
+
