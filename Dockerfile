@@ -95,7 +95,7 @@ CMD ["./bin/rails", "server"]
 # CODIGO SUMINISTRADO OR CHATGPT
 
 # Usa una imagen base de Ruby (ajusta según tu versión)
-FROM ruby:3.0
+FROM ruby:3.1.2p20
 
 # Instala dependencias necesarias
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
